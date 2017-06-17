@@ -9,8 +9,7 @@ function sortArr(arr) {
 
   var arr2 = [];
 
-  arr2.push(arr[arr.length-2]);
-  arr2.unshift(arr[1]);
+  arr2.push(arr[1], arr[arr.length-2]);
   console.log(arr2);
 }
 
