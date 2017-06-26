@@ -1,7 +1,7 @@
 function union(arr1, arr2) {
   var result = [];
 
-  if (arr1.length < arr2.length) {
+  if (arr1.length < arr2.length && arr1.length == arr2.length) {
     for (var i = 0; i < arr2.length; i++) {
       result.push(arr2[i]);
     }
@@ -28,4 +28,4 @@ function union(arr1, arr2) {
   console.log(result);
 }
 
-union([100, 2, 1, 10], [1, 2, 3]);
+union([100, 2, 1, 10], [1, 2, 3, 4]);
