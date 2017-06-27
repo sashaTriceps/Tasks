@@ -10,7 +10,7 @@ class Speaker {
 }
 
 class Shouter extends Speaker {
-  consructor(name) {
+  constructor(name) {
     super(name, "shouts");
   }
 
