@@ -4,7 +4,7 @@ class MyMap {
   }
 
   set(key, value) {
-    return this.map.set(key, value);
+    this.map.set(key, value);
   }
 
   get(key) {
