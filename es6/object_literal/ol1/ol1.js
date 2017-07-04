@@ -7,5 +7,7 @@ class Point {
   }
 }
 
-var fakePoint = Object.create(Point.prototype)
+var fakePoint = {
+  '__proto__': Point.prototype
+}
 console.log(fakePoint instanceof Point)
