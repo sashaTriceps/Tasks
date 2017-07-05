@@ -33,6 +33,5 @@ get('http://marijnhaverbeke.nl')
                       console.log(href);
                     }
                   })
-              console.log(href);
             }
 		});
