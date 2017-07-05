@@ -15,9 +15,24 @@ function get(url) {
   })
 }
 
-get ("example/data.txt")
-  .then(function(text) {
-    console.log("data.txt:" + text);
-  },function(error) {
-    console.log("Failed to fetch data.txt: " + error) ;
-  });
+get('http://marijnhaverbeke.nl')
+	.then
+		(function() {
+			let href = '';
+  			for (let i = 0; i < document.links.length; i++) {
+            	href = document.links[i].href;
+              get(href)
+                .then
+                  (function() {
+                    let elems = document.getElementsByTagName('p');
+                    let string = '';
+                    for (let i = 0; i < elems.length; i++) {
+                      string += elems[i].slice();
+                    }
+                    if (string.search(/Piranha/i) !== -1) {
+                      console.log(href);
+                    }
+                  })
+              console.log(href);
+            }
+		});
