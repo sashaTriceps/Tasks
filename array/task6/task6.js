@@ -1,16 +1,18 @@
 function func(num) {
-  var str = num.toString();
-  var res = [str[0]];
+  console.log(num);
+  var str = String(num);
 
-  for (var i = 1; i < str.length; i++) {
-    if ((str[i - 1] % 2 === 0) && (str[i] % 2 === 0)) {
-      res.push('-', str[i]);
+  var result = [];
+
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] % 2 === 0 && str[i+1] % 2 === 0) {
+      result.push(str[i], '-');
     } else {
-      res.push(str[i]);
+      result.push(str[i]);
     }
   }
-  var result = res.join('');
-  console.log(result);
+
+  return result.join('');
 }
 
-func(123444556);
+console.log(func(225468));
