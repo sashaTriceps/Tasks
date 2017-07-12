@@ -1,10 +1,31 @@
-function getElem(arr, n) {
+function first(arr, n) {
   var arr1 = [];
 
-  for (var i = 0; i < n; i++) {
-    arr1.push(arr[i]);
+  if (n == undefined) {
+    return arr[0];
   }
-  console.log(arr1);
+
+  if (arr.length == 0) {
+    return arr;
+  }
+
+  if (n > arr.length) {
+    for (var i = 0; i < arr.length; i++) {
+      arr1.push(arr[i]);
+    }
+  }
+
+  if (n <= arr.length) {
+    for (var i = 0; i < n; i++) {
+      arr1.push(arr[i]);
+    }
+  }
+  
+  return arr1;
 }
 
-getElem([1, 2, 3, 4, 5, 6], 3);
+console.log(first([7, 9, 0, -2])); 
+console.log(first([],3));
+console.log(first([7, 9, 0, -2],3));
+console.log(first([7, 9, 0, -2],6));
+console.log(first([7, 9, 0, -2],-3));
